@@ -5,15 +5,15 @@ var path = require('path');
 
 // Configure the Express application
 var app = express();
-var PORT = process.env.PORT;
+var PORT = process.env.PORT ||
 
-// Expose the public directory to access CSS files
-app.use(express.static(path.join(__dirname, './app/public')));
+    // Expose the public directory to access CSS files
+    app.use(express.static(path.join(__dirname, './app/public')));
 
 // Add middleware for parsing incoming request bodies
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
+app.use(bodyParser.text({ tyoe: 'text/html' }));
 
 // Add the application routes
 require(path.join(__dirname, './app/routing/apiRoutes2'))(app);
