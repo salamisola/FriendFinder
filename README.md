@@ -13,4 +13,4 @@ Conflict resolved:
 Conflict of boothstrap resolved. Survey page better formatted wiht a nicer look and feel. 
 
 # Heroku deployed link below:
-https://git.heroku.com/aqueous-stream-23177.git
+https://aqueous-stream-23177.herokuapp.com/
