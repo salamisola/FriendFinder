@@ -9,4 +9,8 @@ FriendFinder takes in responses to all of the pre-defined survey questions form 
 Issues to fix:
 There was a conflict of two different bootstrap links (codes) used that caused the submit function in survey.html to malfunction. This was eventually fixed but left a little problem with the look and fonts on the survey page. this is being worked on to be fixed. Every other functions are working.
 
-Heroku doployed link below:
+Conflict resolved:
+Conflict of boothstrap resolved. Survey page better formatted wiht a nicer look and feel. 
+
+# Heroku deployed link below:
+https://git.heroku.com/aqueous-stream-23177.git
