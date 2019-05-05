@@ -1,68 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FriendFinder</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    
+	
+	
+	 <!--link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome Glyphicons >
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+    />
 
-<head>
-    <title>Friend Finder Pro</title>
-
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-    <!-- Font Awesome Glyphicons -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <!--script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"-->
-
-    <!-- Chosen -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-
-    <style>
-        h2 {
-            font-family: pacifico
-        }
-    </style>
-</head>
-
-<body>
-    <!--header>
-		<nav>
-			<div class="nav-wrapper pink accent-2">
-				<i class="fa fa-address-book-o fa-5x" aria-hidden="true" id=logo-icon></i>
-				<a href="/" class="brand-logo" id="logo">Friend Finder</a>
-				<ul class="right hide-on-med-and-down" id="head-nav-links">
-					<li><a href="/survey">Survey</a></li>
-					<li><a href="/api/friends">API Friends List</a></li>
-					<li><a href="https://github.com/angrbrd/friend-finder">GitHub Repo</a></li>
-				</ul>
-			</div>
-		</nav>
-	</header-->
+    <link rel="stylesheet" type="text/css" href="../css/style.css" /-->
+  </head>
+  <body>
     <div class="container">
+      <div class="jumbotron"  style="background-color:rgb(208, 240, 238); color: rgb(102, 99, 95)">
+			<h2><strong>The Survey</strong></h2>
+			<hr>
 
-        <div class="jumbotron" style="background-color:rgb(208, 240, 238); color: rgb(102, 99, 95)">
-            <h3><strong>The Survey</strong></h3>
-            <hr>
+			<h4><strong>Personal Data</strong></h4>
+			<h6>Name (Required)</h6>
+			<input type="text" id="userName" class="form-control" required>
 
-            <h5><strong>Personal Data</strong></h5>
-            <h6>Name (Required)</h6>
-            <input type="text" id="userName" class="form-control" required>
+			<h6>Drop Link to Photo Image Here (Required)</h>
+			<input type="text" id="userPhoto" class="form-control">
 
-            <h6>Drop Link to Photo Image Here (Required)</h6>
-            <input type="text" id="userPhoto" class="form-control">
 
-            <hr>
-        </div>
 
-        <!-- Survey Questions -->
-        <h5><strong>Question 1</strong></h5>
-        <h6>You enjoy vibrant social events with lots of people.</h6>
+		<!-- Survey Questions -->
+						<h4><strong>Question 1</strong></h4>
+        <h5>You enjoy vibrant social events with lots of people.</h5>
         <select class="chosen-select" id="question1">
             <option value=""></option>
             <option value="1">1 (Disagree)</option>
@@ -72,8 +63,8 @@
             <option value="5">5 (Agree)</option>
         </select>
 
-        <h5><strong>Question 2</strong></h5>
-        <h6>Your travel plans are more likely to look like a rough list of ideas than a detailed itinerary.</h6>
+        <h4><strong>Question 2</strong></h4>
+        <h5>Your travel plans are more likely to look like a rough list of ideas than a detailed itinerary.</h5>
         <select class="chosen-select" id="question2">
             <option value=""></option>
             <option value="1">1 (Disagree)</option>
@@ -84,8 +75,8 @@
         </select>
 
 
-        <h5><strong>Question 3</strong></h5>
-        <h6>You often think about what you should have said in a conversation long after it has taken place.</h6>
+        <h4><strong>Question 3</strong></h4>
+        <h5>You often think about what you should have said in a conversation long after it has taken place.</h5>
         <select class="chosen-select" id="question3">
             <option value=""></option>
             <option value="1">1 (Disagree)</option>
@@ -96,9 +87,9 @@
         </select>
 
 
-        <h5><strong>Question 4</strong></h5>
-        <h6>If your friend is sad about something, your first instinct is to support them emotionally, not try to solve
-            their problem.</h6>
+        <h4><strong>Question 4</strong></h4>
+        <h5>If your friend is sad about something, your first instinct is to support them emotionally, not try to solve
+            their problem.</h5>
         <select class="chosen-select" id="question4">
             <option value=""></option>
             <option value="1">1 (Disagree)</option>
@@ -109,8 +100,8 @@
         </select>
 
 
-        <h5><strong>Question 5</strong></h5>
-        <h6>You often rely on other people to be the ones to start a conversation and keep it going.</h6>
+        <h4><strong>Question 5</strong></h4>
+        <h5>You often rely on other people to be the ones to start a conversation and keep it going.</h5>
         <select class="chosen-select" id="question5">
             <option value=""></option>
             <option value="1">1 (Disagree)</option>
@@ -121,8 +112,8 @@
         </select>
 
 
-        <h5><strong>Question 6</strong></h5>
-        <h6>It would be a challenge for you to spend the whole weekend all by yourself without feeling bored.</h6>
+        <h4><strong>Question 6</strong></h4>
+        <h5>It would be a challenge for you to spend the whole weekend all by yourself without feeling bored.</h5>
         <select class="chosen-select" id="question6">
             <option value=""></option>
             <option value="1">1 (Disagree)</option>
@@ -133,8 +124,8 @@
         </select>
 
 
-        <h5><strong>Question 7</strong></h5>
-        <h6>You are very affectionate with people you care about.</h6>
+        <h4><strong>Question 7</strong></h4>
+        <h5>You are very affectionate with people you care about.</h5>
         <select class="chosen-select" id="question7">
             <option value=""></option>
             <option value="1">1 (Disagree)</option>
@@ -144,8 +135,8 @@
             <option value="5">5 (Agree)</option>
         </select>
 
-        <h5><strong>Question 8</strong></h5>
-        <h6>You are still bothered by the mistakes you made a long time ago.</h6>
+        <h4><strong>Question 8</strong></h4>
+        <h5>You are still bothered by the mistakes you made a long time ago.</h5>
         <select class="chosen-select" id="question8">
             <option value=""></option>
             <option value="1">1 (Disagree)</option>
@@ -155,8 +146,8 @@
             <option value="5">5 (Agree)</option>
         </select>
 
-        <h5><strong>Question 9</strong></h5>
-        <h6>At parties and similar events you can mostly be found farther away from the action.</h6>
+        <h4><strong>Question 9</strong></h4>
+        <h5>At parties and similar events you can mostly be found farther away from the action.</h5>
         <select class="chosen-select" id="question9">
             <option value=""></option>
             <option value="1">1 (Disagree)</option>
@@ -166,8 +157,8 @@
             <option value="5">5 (Agree)</option>
         </select>
 
-        <h5><strong>Question 10</strong></h5>
-        <h6>You often find it difficult to relate to people who let their emotions guide them.</h6>
+        <h4><strong>Question 10</strong></h4>
+        <h5>You often find it difficult to relate to people who let their emotions guide them.</h5>
         <select class="chosen-select" id="question10">
             <option value=""></option>
             <option value="1">1 (Disagree)</option>
@@ -177,81 +168,84 @@
             <option value="5">5 (Agree)</option>
         </select><br />
         <br />
-
-        <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitButton" name="action"><i
-                class="fa fa-check-circle" aria-hidden="true"></i>
-            Submit</button>
-
-        <hr>
-        <footer class="footer">
+		      </div>
+      <button type="submit" class="btn btn-primary btn-lg btn-block btn-success" id="submit">
+        <i class="fa fa-check-circle" aria-hidden="true"></i> Submit
+      </button>
+      <br />
+      <br />
+	  <footer class="footer text-center">
             <div class="container">
-                <p><a href="/api/friends">Friends List API</a> | <a
-                        href="https://github.com/salamisola/FriendFinder">GitHub Repo</a></p>
+                <p><a href="/api/friends">Friend Finder API</a> | <a
+                        href="https://github.com/salamisola/FriendFinder">GitHub Repo</a>
             </div>
         </footer>
+    </div>
+    <div id="resultsModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+            <h2 class="modal-title"><strong>Best Match</strong></h2>
+          </div>
 
-        <div>
+          <div class="modal-body">
+            <h2 id="matchName"></h2>
+            <img
+              id="matchImg"
+              src="https://via.placeholder.com/400x400"
+              alt="Placeholder image in case user pic doesn't show"
+            />
+          </div>
+		  <div class="modal-footer">
+			<a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Take Survey Again!</a>
+		</div>
+        </div>
+      </div>
+    </div>
 
-            <!-- Modal Dialog Displaying Closest Friend Match -->
-            <div id="modal1" class="modal">
-                <div class="modal-content">
-                    <h4>Closest Friend Match</h4>
-                    <div class="divider"></div>
-                    <h5 id="userMatch"></h5>
-                    <img id="userMatchImage" class="materialboxed" width="650" src="">
-                </div>
-                <div class="modal-footer">
-                    <a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Take Survey
-                        Again!</a>
-                </div>
-            </div>
-
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    $('select').material_select();
-                    $('.modal').modal({
-                        dismissible: false, // Modal can be dismissed by clicking outside of the modal
-                        opacity: .5, // Opacity of modal background
-                        inDuration: 300, // Transition in duration
-                        outDuration: 200, // Transition out duration
-                        startingTop: '4%', // Starting top style attribute
-                        endingTop: '10%' // Ending top style attribute
-                    });
-                });
-                // Activate submit button
-                $('#submitButton').on('click', function (event) {
-                    event.preventDefault();
-                    // Gather user inputs
-                    var userInput = {
-                        name: $('#userName').val().trim(),
-                        photo: $('#userPhoto').val().trim(),
-                        scores: [
-                            $('#question1').val().trim(),
-                            $('#question2').val().trim(),
-                            $('#question3').val().trim(),
-                            $('#question4').val().trim(),
-                            $('#question5').val().trim(),
-                            $('#question6').val().trim(),
-                            $('#question7').val().trim(),
-                            $('#question8').val().trim(),
-                            $('#question9').val().trim(),
-                            $('#question10').val().trim()
-                        ]
-                    };
-                    // console.log('userInput = ' + JSON.stringify(userInput));
-                    // Add user inputs to friends list
-                    $.post('/api/friends', userInput)
-                        .done(function (data) {
-                            // console.log('response = ' + JSON.stringify(data));
-                            // Set the name and image values of friend match
-                            $('#userMatch').html(data.matchName);
-                            $("#userMatchImage").attr("src", data.matchImage);
-                            // Pop open the modal dialog
-                            $('#modal1').modal('open');
-                        });
-                });
-            </script>
-</body>
-
+    <script type="text/javascript">
+      $("#submit").on("click", function() {
+        function validateForm() {
+          var isValid = true;
+          $(".form-control").each(function() {
+            if ($(this).val() === "") isValid = false;
+          });
+          $(".chosen-select").each(function() {
+            if ($(this).val() === "") isValid = false;
+          });
+          return isValid;
+        }
+        if (validateForm() == true) {
+          var userData = {
+            name: $("#userName").val(),
+            photo: $("#userPhoto").val(),
+            scores: [
+			  $('#question1').val().trim(),
+				$('#question2').val().trim(),
+				$('#question3').val().trim(),
+				$('#question4').val().trim(),
+				$('#question5').val().trim(),
+				$('#question6').val().trim(),
+				$('#question7').val().trim(),
+				$('#question8').val().trim(),
+				$('#question9').val().trim(),
+				$('#question10').val().trim()
+            ]
+          };
+          var currentURL = window.location.origin;
+          $.post(currentURL + "/api/friends", userData, function(data) {
+            $("#matchName").text(data.name);
+            $("#matchImg").attr("src", data.photo);
+            $("#resultsModal").modal("toggle");
+          });
+        } else {
+          alert("Please fill out all fields before submitting!");
+        }
+        return false;
+      });
+    </script>
+  </body>
 </html>
